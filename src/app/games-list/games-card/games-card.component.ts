@@ -1,4 +1,5 @@
-import { Component, NgModule, OnInit } from '@angular/core';
+import { Component, Input, NgModule, OnInit } from '@angular/core';
+import { Result } from 'src/app/model/GamesModel';
 
 @Component({
   selector: 'app-games-card',
@@ -8,6 +9,7 @@ import { Component, NgModule, OnInit } from '@angular/core';
 
 export class GamesCardComponent implements OnInit{
 
+  @Input() myGame!: Result
   constructor() { }
  
 

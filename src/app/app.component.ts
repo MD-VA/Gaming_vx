@@ -11,11 +11,11 @@ export class AppComponent implements OnInit{
   constructor(private GameListService: GameListService) {
 
   }
-  games!: Result[]
+  // games!: Result[]
 
   ngOnInit(){
-    this.games = this.GameListService.getAllGames()
-    console.log(this.games)
+    // this.games = this.GameListService.getAllGames()
+    // console.log(this.games)
   }
 
 }

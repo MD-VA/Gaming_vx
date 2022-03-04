@@ -1,2 +1,4 @@
 <p>The game list page</p>
-<app-games-card></app-games-card>
+<div class="gameList">
+    <app-games-card *ngFor="let game of games" [myGame]="game"></app-games-card>
+</div>
