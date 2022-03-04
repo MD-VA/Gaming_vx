@@ -38,7 +38,7 @@ export interface Result {
     id:                 number;
     slug:               string;
     name:               string;
-    released:           Date;
+    released:           string | Date;
     tba:                boolean;
     background_image:   string;
     rating:             number;
@@ -51,11 +51,11 @@ export interface Result {
     metacritic:         number;
     playtime:           number;
     suggestions_count:  number;
-    updated:            Date;
+    updated:            Date | string;
     user_game:          null;
     reviews_count:      number;
-    saturated_color:    Color;
-    dominant_color:     Color;
+    saturated_color:    Color | string;
+    dominant_color:     Color |string;
     platforms:          PlatformElement[];
     parent_platforms:   ParentPlatform[];
     genres:             Genre[];
@@ -91,8 +91,8 @@ export interface Genre {
     slug:             string;
     games_count:      number;
     image_background: string;
-    domain?:          Domain;
-    language?:        Language;
+    domain?:          Domain | string;
+    language?:        Language | string;
 }
 
 export enum Domain {
@@ -117,7 +117,7 @@ export interface ParentPlatform {
 
 export interface PlatformElement {
     platform:        PlatformPlatform;
-    released_at:     Date | null;
+    released_at:     Date | null | string;
     requirements_en: Requirements | null;
     requirements_ru: Requirements | null;
 }
@@ -140,7 +140,7 @@ export interface Requirements {
 
 export interface Rating {
     id:      number;
-    title:   Title;
+    title:   Title | string;
     count:   number;
     percent: number;
 }
