@@ -1,4 +1,4 @@
 <p>The game list page</p>
 <div class="gameList">
-    <app-games-card *ngFor="let game of games" [myGame]="game"></app-games-card>
+    <app-games-card *ngFor="let game of (games | sortByDate)" [myGame]="game"></app-games-card>
 </div>
