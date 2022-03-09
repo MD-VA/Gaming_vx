@@ -11,23 +11,32 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GamesCardComponent } from './games-list/games-card/games-card.component';
 import { registerLocaleData } from '@angular/common';
 import { sortByDatePipe } from './pipes/games.pipe';
+import { SearchFilterPipe } from './pipe/search-filter.pipe';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     GamesListComponent,
     GamesCardComponent,
-    sortByDatePipe
+    sortByDatePipe,
+    SearchFilterPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule
+
   ],
   exports: [
-    sortByDatePipe
+    sortByDatePipe,
+    SearchFilterPipe,
+    FormsModule
+
   ],
   providers: [
     {

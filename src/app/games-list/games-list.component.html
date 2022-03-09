@@ -1,4 +1,7 @@
 <p>The game list page</p>
 <div class="gameList">
-    <app-games-card *ngFor="let game of (games | sortByDate)" [myGame]="game"></app-games-card>
+    <div class="form-group">
+        <input type="text" class="form-control mb-4" placeholder="Search" [(ngModel)]="searchFilter" id="listSearch">
+      </div>
+    <app-games-card *ngFor="let game of (games | sortByDate | searchFilter: searchFilter)" [myGame]="game"></app-games-card>
 </div>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Result } from '../model/GamesModel';
 import { GameListService } from './games-list.service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-games-list',
@@ -9,6 +10,7 @@ import { GameListService } from './games-list.service';
 })
 export class GamesListComponent implements OnInit {
   games!: Result[]
+  public searchFilter: any = '';
 
   constructor(private GameListService: GameListService) { }
 
