@@ -13,6 +13,7 @@ import { registerLocaleData } from '@angular/common';
 import { sortByDatePipe } from './pipes/games.pipe';
 import { SearchFilterPipe } from './pipe/search-filter.pipe';
 import { FormsModule } from '@angular/forms';
+import { OrderByPipe } from './pipe/order-by.pipe';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     GamesListComponent,
     GamesCardComponent,
     sortByDatePipe,
-    SearchFilterPipe
+    SearchFilterPipe,
+    OrderByPipe,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +37,8 @@ import { FormsModule } from '@angular/forms';
   exports: [
     sortByDatePipe,
     SearchFilterPipe,
-    FormsModule
+    FormsModule,
+    OrderByPipe
 
   ],
   providers: [

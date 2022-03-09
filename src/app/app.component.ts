@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { GameListService } from './games-list/games-list.service';
 import { Result } from './model/GamesModel';
 @Component({
@@ -6,7 +6,7 @@ import { Result } from './model/GamesModel';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit, OnDestroy{
 
   constructor(private GameListService: GameListService) {
 
@@ -16,6 +16,9 @@ export class AppComponent implements OnInit{
   ngOnInit(){
     // this.games = this.GameListService.getAllGames()
     // console.log(this.games)
+  }
+  ngOnDestroy(): void {
+      
   }
 
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, VERSION } from '@angular/core';
 import { Result } from '../model/GamesModel';
 import { GameListService } from './games-list.service';
 import { FormsModule } from '@angular/forms';
@@ -11,6 +11,9 @@ import { FormsModule } from '@angular/forms';
 export class GamesListComponent implements OnInit {
   games!: Result[]
   public searchFilter: any = '';
+  name = 'Angular ' + VERSION.major;
+  selectedFilter = 'desc';
+  selectedFilterName = '';
 
   constructor(private GameListService: GameListService) { }
 
@@ -18,5 +21,12 @@ export class GamesListComponent implements OnInit {
     this.games = this.GameListService.getAllGames()
     console.log(this.games)
   }
-
+  selectChangeHandler (event: any) {
+    //update the ui
+    this.selectedFilter = event.target.value;
+  }
+  selectChangeHandlerName (event: any) {
+    //update the ui
+    this.selectedFilterName = event.target.value;
+  }
 }

@@ -1,7 +1,20 @@
-<p>The game list page</p>
+<!-- <p>The game list page</p> -->
+<div class="form-group search">
+    <input type="text" class="form-control mb-4 searchInput" placeholder="Search" [(ngModel)]="searchFilter" id="listSearch">
+</div>
+
+<div class="filters">
+    <select (change)="selectChangeHandler($event)">
+        <option value="desc">desc</option>
+        <option value="asc">asc</option>
+    </select>
+    <select (change)="selectChangeHandlerName($event)">
+        <option value="">none</option>
+        <option value="name">A-Z</option>
+    </select>
+</div>
+
+     
 <div class="gameList">
-    <div class="form-group">
-        <input type="text" class="form-control mb-4" placeholder="Search" [(ngModel)]="searchFilter" id="listSearch">
-      </div>
-    <app-games-card *ngFor="let game of (games | sortByDate | searchFilter: searchFilter)" [myGame]="game"></app-games-card>
+    <app-games-card *ngFor="let game of (games | sortByDate: selectedFilter | searchFilter: searchFilter | orderBy: selectedFilterName)" [myGame]="game"></app-games-card>
 </div>
