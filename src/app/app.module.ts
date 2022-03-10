@@ -14,6 +14,7 @@ import { sortByDatePipe } from './pipes/games.pipe';
 import { SearchFilterPipe } from './pipe/search-filter.pipe';
 import { FormsModule } from '@angular/forms';
 import { OrderByPipe } from './pipe/order-by.pipe';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { OrderByPipe } from './pipe/order-by.pipe';
     sortByDatePipe,
     SearchFilterPipe,
     OrderByPipe,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
