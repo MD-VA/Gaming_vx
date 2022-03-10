@@ -16,6 +16,8 @@ import { FormsModule } from '@angular/forms';
 import { OrderByPipe } from './pipe/order-by.pipe';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { GamesDetailComponent } from './games-detail/games-detail.component';
+import { AboutComponent } from './about/about.component';
 
 
 @NgModule({
@@ -28,6 +30,8 @@ import { FooterComponent } from './footer/footer.component';
     OrderByPipe,
     HeaderComponent,
     FooterComponent,
+    GamesDetailComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
