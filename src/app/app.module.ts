@@ -15,6 +15,7 @@ import { SearchFilterPipe } from './pipe/search-filter.pipe';
 import { FormsModule } from '@angular/forms';
 import { OrderByPipe } from './pipe/order-by.pipe';
 import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { HeaderComponent } from './header/header.component';
     SearchFilterPipe,
     OrderByPipe,
     HeaderComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
