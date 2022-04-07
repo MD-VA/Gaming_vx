@@ -18,6 +18,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { GamesDetailComponent } from './games-detail/games-detail.component';
 import { AboutComponent } from './about/about.component';
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatTabsModule} from "@angular/material/tabs";
 
 
 @NgModule({
@@ -39,7 +41,9 @@ import { AboutComponent } from './about/about.component';
     BrowserAnimationsModule,
     MatCardModule,
     MatButtonModule,
-    FormsModule
+    FormsModule,
+    MatToolbarModule,
+    MatTabsModule
 
   ],
   exports: [

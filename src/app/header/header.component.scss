@@ -1,9 +1,27 @@
 .is-active {
     text-decoration: none;
-    color: red;
+    color: Blue;
 }
-nav{
+.nav{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+.left-nav{
+  text-align: start;
+
+}
+.right-nav{
+    text-align: end;
+}
+
+.left-nav .link, .right-nav .link  {
+    margin: 0px 10px;
 }
