@@ -1,21 +1,27 @@
-<!-- <p>The game list page</p> -->
-<div class="form-group search">
+<section *ngIf="games">
+  <div class="form-group search">
     <input type="text" class="form-control mb-4 searchInput" placeholder="Search" [(ngModel)]="searchFilter" id="listSearch">
-</div>
+  </div>
 
-<div class="filters">
-    
+  <div class="filters">
+
     <select (change)="selectChangeHandler($event)">
-        <option value="desc">desc</option>
-        <option value="asc">asc</option>
+      <option value="desc">desc</option>
+      <option value="asc">asc</option>
     </select>
     <select (change)="selectChangeHandlerName($event)">
-        <option value="">none</option>
-        <option value="name">A-Z</option>
+      <option value="">none</option>
+      <option value="name">A-Z</option>
     </select>
-</div>
+  </div>
 
-     
-<div class="gameList">
+
+  <div class="gameList">
     <app-games-card *ngFor="let game of (games | sortByDate: selectedFilter | searchFilter: searchFilter | orderBy: selectedFilterName)" [myGame]="game"></app-games-card>
-</div>
+  </div>
+
+</section><!-- <p>The game list page</p> -->
+<section *ngIf="!games">
+  Loading...
+  <button (click)="logData()">log data</button>
+</section>

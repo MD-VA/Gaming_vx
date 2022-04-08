@@ -1,4 +1,4 @@
-export interface Welcome {
+export interface GamesModel {
     count:                number;
     next:                 string;
     previous:             null;

@@ -20,6 +20,8 @@ import { GamesDetailComponent } from './games-detail/games-detail.component';
 import { AboutComponent } from './about/about.component';
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatTabsModule} from "@angular/material/tabs";
+import {HttpClientModule} from "@angular/common/http";
+import { GamesCartComponent } from './components/games-cart/games-cart.component';
 
 
 @NgModule({
@@ -34,6 +36,7 @@ import {MatTabsModule} from "@angular/material/tabs";
     FooterComponent,
     GamesDetailComponent,
     AboutComponent,
+    GamesCartComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,8 +46,8 @@ import {MatTabsModule} from "@angular/material/tabs";
     MatButtonModule,
     FormsModule,
     MatToolbarModule,
-    MatTabsModule
-
+    MatTabsModule,
+    HttpClientModule,
   ],
   exports: [
     sortByDatePipe,

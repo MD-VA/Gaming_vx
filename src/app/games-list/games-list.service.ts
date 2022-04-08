@@ -3,11 +3,12 @@ import { Router } from '@angular/router';
 import gamesList from '../../data/gamesList.json';
 import { Result } from '../model/GamesModel';
 import { GamesListComponent } from './games-list.component';
+import {HttpClient} from "@angular/common/http";
 
 @Injectable({providedIn: 'root'})
 
-export class GameListService {
-    constructor(private router: Router) { }
+export class GameListService{
+    constructor(private router: Router, http: HttpClient) { }
     games: Result[] = gamesList.results;
 
 getAllGames(): Result[] {
