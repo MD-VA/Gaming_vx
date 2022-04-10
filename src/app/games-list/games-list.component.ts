@@ -10,7 +10,6 @@ import {AppService} from "../app.service";
   styleUrls: ['./games-list.component.scss']
 })
 export class GamesListComponent implements OnInit {
-  // games: Result[] = this.AppService.gameList?.results;
   games!: Result[];
   public searchFilter: any = '';
   name = 'Angular ' + VERSION.major;
