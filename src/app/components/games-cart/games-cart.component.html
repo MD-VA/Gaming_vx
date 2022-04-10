@@ -1,3 +1,9 @@
-<div class="cart-container">
-
+<div *ngIf="cartData" class="cart-container">
+  <p>
+    <span class="cart-title">Cart</span>
+    <span class="cart-total" *ngFor="let games of cartData">{{games.uuid}}</span>
+  </p>
+</div>
+<div *ngIf="!cartData">
+  loading...
 </div>

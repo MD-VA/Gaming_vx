@@ -5,6 +5,7 @@ import {Observable} from "rxjs";
 @Injectable({
   providedIn: 'root'
 })
+
 export class AppService {
 
   constructor(
@@ -18,5 +19,13 @@ export class AppService {
       return gamesData;
     }
 
+  getCartDataApi () {
+      const  cartData = this.http.get('http://localhost:8080/api/cart');
+      return cartData;
+    }
 
+    addGameToCartApi (gamesData: any) {
+      const  cartData = this.http.post('http://localhost:8080/api/cart', gamesData);
+      return cartData;
+    }
 }
