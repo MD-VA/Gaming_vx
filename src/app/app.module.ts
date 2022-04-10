@@ -23,7 +23,6 @@ import {MatTabsModule} from "@angular/material/tabs";
 import {HttpClientModule} from "@angular/common/http";
 import { GamesCartComponent } from './components/games-cart/games-cart.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
