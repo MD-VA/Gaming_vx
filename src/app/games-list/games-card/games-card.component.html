@@ -1,18 +1,20 @@
 <mat-card class="example-card">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>{{myGame.name}}</mat-card-title>
-      <mat-card-subtitle>{{myGame.released}}</mat-card-subtitle>
-    </mat-card-header>
-    <img class="gameImg" mat-card-image src={{myGame.background_image}} alt="Photo of a Shiba Inu">
-    <mat-card-content class="type" >
-      <div *ngFor="let type of myGame.genres">
-        <p>{{type.name}}</p>
-      </div>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>LIKE</button>
-      <a [routerLink]="['games',  myGame.id]">detail</a>
-      <!-- <button mat-button>SHARE</button> -->
-    </mat-card-actions>
-  </mat-card>
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{myGame.name}}</mat-card-title>
+    <mat-card-subtitle>{{myGame.released}}</mat-card-subtitle>
+  </mat-card-header>
+  <img class="gameImg" mat-card-image src={{myGame.background_image}} alt="Photo of a Shiba Inu">
+  <mat-card-content class="type">
+    <div *ngFor="let type of myGame.genres">
+      <p>{{type.name}}</p>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <input type="number" placeholder="Quantité" [(ngModel)]="quantity">
+    <button mat-button>LIKE</button>
+    <button mat-button (click)="addToCard()">AJOUTER AU PANIER</button>
+    <a [routerLink]="['games',  myGame.id]">detail</a>
+    <!-- <button mat-button>SHARE</button> -->
+  </mat-card-actions>
+</mat-card>
