@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {AppService} from "../../app.service";
-import { Cart} from "../../model/CartModel";
+import { AppService } from "../../app.service";
+import { Cart } from "../../model/CartModel";
 
 @Component({
   selector: 'app-games-cart',
@@ -13,17 +13,19 @@ export class GamesCartComponent implements OnInit {
 
   constructor(private appService: AppService) {
     // @ts-ignore
-    this.appService.getCartDataApi().subscribe( (res: Cart[]) => {
-             this.cartData = res;
-             console.log(this.cartData);
-      },
+    this.appService.getCartDataApi().subscribe((res: Cart[]) => {
+      this.cartData = res;
+      this.cartData.forEach(elem => {
+        console.log(elem.name);
+      })
+    },
       error => {
         console.log(error);
       });
   }
 
   ngOnInit(): void {
-
+    console.warn(this.cartData);
   }
 
 }

@@ -22,6 +22,7 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatTabsModule} from "@angular/material/tabs";
 import {HttpClientModule} from "@angular/common/http";
 import { GamesCartComponent } from './components/games-cart/games-cart.component';
+import { CartCardComponent } from './cart-card/cart-card.component';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { GamesCartComponent } from './components/games-cart/games-cart.component
     GamesDetailComponent,
     AboutComponent,
     GamesCartComponent,
+    CartCardComponent,
   ],
   imports: [
     BrowserModule,
