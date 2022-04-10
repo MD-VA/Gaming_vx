@@ -13,6 +13,8 @@ import { HttpClient } from "@angular/common/http";
 export class GamesCardComponent implements OnInit {
 
   @Input() myGame!: Result
+
+  price: number = Math.floor(Math.random() * (60 - 40 + 1)) + 40;
   constructor(private http: HttpClient) { }
   quantity = 0;
 
@@ -22,9 +24,10 @@ export class GamesCardComponent implements OnInit {
       type: this.myGame.genres,
       quantity: this.quantity,
       fav: false,
+      price: this.price,
       date: 999,
     }).subscribe(data => {
-      console.warn(data)
+      console.log(data);
     });
   }
 
