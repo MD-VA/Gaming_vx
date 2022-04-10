@@ -12,6 +12,7 @@
   </mat-card-content>
   <mat-card-actions>
     <input type="number" placeholder="Quantité" [(ngModel)]="quantity">
+    <p>Price :{{price}}€</p>
     <button mat-button>LIKE</button>
     <button mat-button (click)="addToCard()">AJOUTER AU PANIER</button>
     <a [routerLink]="['games',  myGame.id]">detail</a>
