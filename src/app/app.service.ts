@@ -28,4 +28,9 @@ export class AppService {
       const  cartData = this.http.post('http://localhost:8080/api/cart', gamesData);
       return cartData;
     }
+
+  getPriceQuantity () {
+    const  data = this.http.get('http://localhost:8080/api/cart/total');
+    return data;
+  }
 }

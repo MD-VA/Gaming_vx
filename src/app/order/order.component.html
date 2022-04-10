@@ -7,7 +7,7 @@
         <a>Quantité : {{games.quantity}}</a>
       </div>
     </span>
-    <a>Prix total : {{price}}</a>
+    <a *ngIf="cartPriceQuantity">Prix total : {{cartPriceQuantity.price}}</a>
   </p>
 </div>
 <div *ngIf="!cards">

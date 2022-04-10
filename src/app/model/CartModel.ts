@@ -6,4 +6,5 @@ export interface Cart {
   fav: boolean;
   quantity: number;
   date?: number;
+  price: number;
 }

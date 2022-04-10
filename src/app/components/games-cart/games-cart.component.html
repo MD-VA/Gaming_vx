@@ -3,11 +3,15 @@
   <p>
     <span class="cart-total" *ngFor="let games of cartData">
       <div style="border: 2px solid red; margin-bottom: 20px;">
-        <a>Produit : {{games.name}}</a> <br />
-        <a>Quantité : {{games.quantity}}</a>
+        <a>Produit : {{games?.name}}</a> <br />
+        <a>Quantité : {{games?.quantity}}</a> <br />
+        <a>price : {{games?.price}}</a>
       </div>
     </span>
-  </p>
+
+    <span class="cart-total">
+      <p *ngIf="cartPriceQuantity">Total : {{cartPriceQuantity.price}}</p>
+    </span>
   <button mat-button [routerLink]="['/order']">COMMANDER</button>
 </div>
 <div *ngIf="!cartData">
