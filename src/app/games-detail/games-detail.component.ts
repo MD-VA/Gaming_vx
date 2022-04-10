@@ -10,18 +10,18 @@ import { Result } from '../model/GamesModel';
 })
 export class GamesDetailComponent implements OnInit {
 
-  id:number  = 0
+  id: number = 0
   games: any;
-  constructor(private route: ActivatedRoute,private GameListService: GameListService) { 
-    this.route.params.subscribe( params => {
+  constructor(private route: ActivatedRoute, private GameListService: GameListService) {
+    this.route.params.subscribe(params => {
       this.id = parseInt(params['id']);
     })
   }
-  
+
   ngOnInit(): void {
     this.games = this.GameListService.getOneGame(this.id)
     // console.log(this.games)
   }
-  
+
 
 }

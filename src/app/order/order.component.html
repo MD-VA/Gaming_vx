@@ -1,0 +1,15 @@
+<div *ngIf="cards" class="cart-container">
+  <h1>Résumé de la Commande</h1>
+  <p>
+    <span class="cart-total" *ngFor="let games of cards">
+      <div style="border: 2px solid red; margin-bottom: 20px;">
+        <a>{{games.name}}</a> <br />
+        <a>Quantité : {{games.quantity}}</a>
+      </div>
+    </span>
+    <a>Prix total : {{price}}</a>
+  </p>
+</div>
+<div *ngIf="!cards">
+  Loading
+</div>
